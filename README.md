@@ -21,13 +21,25 @@ After that you'll have a Visual Studio project file (*.vcxproj) and some related
 3. Expand Debug|Win32 node and then double click 'mbed' node.
 4. Select 'User Macros' from the tree view on the left pane.
 5. Set macros to fit your environment.
-	GccBinDir:	
-		Path to a GCC bin directory. e.g. C:\gcc-arm-none-eabi\bin
-		Do not include trailing path separator character.
-	GccIncludeDir:
-		Path to a GCC include directory. e.g. C:\gcc-arm-none-eabi\arm-none-eabi\include
-	MakePath:
-		Path to a make.exe binary. e.g. C:\gcc-arm-none-eabi\bin\make.exe
+<dl>
+<dt>GccBinDir</dt>
+<dd>
+	<p>Path to a GCC bin directory. e.g. C:\gcc-arm-none-eabi\bin</p>
+	<p>Do not include trailing path separator character.</p>
+</dd>
+</dl>
+<dl>
+<dt>GccIncludeDir</dt>
+<dd>
+	<p>Path to a GCC include directory. e.g. C:\gcc-arm-none-eabi\arm-none-eabi\include</p>
+</dd>
+</dl>
+<dl>
+<dt>MakePath</dt>
+<dd>
+	<p>Path to a make.exe binary. e.g. C:\gcc-arm-none-eabi\bin\make.exe</p>
+</dd>
+</dl>
 
 Now you can build the project and edit with Visual Studio editor with Intellisense enabled.
 

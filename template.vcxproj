@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Makefile" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{77447C85-217E-4B28-A0BD-46C4818F069E}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v130</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v130</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="mbed.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="mbed.props" />
+  </ImportGroup>
+
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>$(ProjectDir)..\make.cmd all DEBUG=1</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)..\make.cmd clean DEBUG=1</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)..\make.cmd rebuild DEBUG=1</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(ProjectDir)..</OutDir>
+    <IntDir />
+    <NMakeOutput></NMakeOutput>
+    <NMakeIncludeSearchPath></NMakeIncludeSearchPath>
+    <IncludePath>$(GccIncludeDir)</IncludePath>
+    <AdditionalOptions>/Za</AdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>$(ProjectDir)..\make.cmd all NDEBUG=1</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)..\make.cmd clean NDEBUG=1</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)..\make.cmd rebuild NDEBUG=1</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(ProjectDir)..</OutDir>
+    <IntDir />
+    <NMakeOutput></NMakeOutput>
+    <NMakeIncludeSearchPath></NMakeIncludeSearchPath>
+    <IncludePath>$(GccIncludeDir)</IncludePath>
+    <AdditionalOptions>/Za</AdditionalOptions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
